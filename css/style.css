@@ -2,19 +2,24 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16),
+    0 2px 10px rgba(0, 0, 0, 0.12);
   padding: 8px 16px;
   letter-spacing: 4px;
+  background-color: #fff;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
 }
 
 .navbar_logo,
 .nav_link {
   display: inline-block;
   padding: 8px 16px;
-}
-
-.navbar_logo > span {
-  font-weight: 700;
 }
 
 .navbar_logo:hover,
@@ -27,4 +32,184 @@
 }
 
 .nav_item {
+}
+
+/* Header */
+.header {
+  position: relative;
+}
+
+.heading_primary {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 4px;
+  margin-top: 16px;
+  color: #f1f1f1;
+}
+
+.heading_primary strong {
+  padding: 8px 16px;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.main {
+  padding: 8px 16px;
+}
+
+/* Projects */
+.section_box h2 {
+  margin: 10px 0;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 16px 0;
+}
+
+.project_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 0 16px 16px;
+}
+
+.project_item {
+  position: relative;
+}
+
+.project_title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  color: #fff;
+  padding: 8px 16px;
+}
+
+.padding-left {
+  padding-right: 3px;
+}
+
+/* *********************** */
+/* ********* About ******* */
+/* *********************** */
+.about_introduc {
+  margin: 15px 0;
+}
+
+.about_info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 0 16px;
+}
+
+.about_item {
+  margin-bottom: 15px;
+}
+
+.about_name {
+  padding: 0;
+}
+
+.about_service {
+  margin: 15px 0;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.about_title {
+  margin: 15px 0;
+}
+
+.about_button {
+  width: 100%;
+  padding: 8px 16px;
+  font-size: 15px;
+  line-height: 1.5;
+  font-family: Verdana, sans-serif;
+  border: 0 solid #fff;
+}
+
+.about_button:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Contact */
+.contact > p {
+  margin: 15px 0;
+}
+
+.contact form input {
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.contact form button {
+  margin: 16px 0;
+  padding: 8px 16px;
+  background-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+  border: 0 solid;
+
+}
+
+.contact form button:hover {
+  background-color: #ccc;
+  color: #000;
+  cursor: pointer;
+}
+
+/* map */
+.map {
+  padding: 0 16px;
+}
+
+/* footer */
+.footer {
+  padding: 16px 0;
+  background-color: #000;
+  color: #fff;
+}
+
+.footer p {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.footer a:hover {
+  color: green;
+}
+
+@media screen and (max-width: 992px) {
+  .project_grid,
+  .about_info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .padding-left {
+    padding-right: 4px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar_nav {
+    display: none;
+  }
+
+  .project_grid,
+  .about_info {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .heading_primary span {
+    display: none;
+  }
 }
